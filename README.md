@@ -11,7 +11,7 @@ framework, no backend. Accounts and messages are stored in the browser's
 storage. Good enough for this assignment; swap it for a real API if you ever
 extend this into something more than a UI project.
 
-## The five pages
+## The five pages UI
 
 Each of these can be assigned to a different group member to build or own:
 
@@ -24,7 +24,7 @@ Each of these can be assigned to a different group member to build or own:
 "Protected" pages redirect to the login page if no one is signed in.
 Logout is a button in the top nav on every protected page, not a separate page.
 
-## What's included
+## What's included In Projects
 
 - Sign up and login with basic validation, combined into one page with tabs
 - Logout button (top nav on Chat / Status / Profile), which clears the session
