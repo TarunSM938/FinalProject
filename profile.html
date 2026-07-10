@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Profile — Scribble</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="css/style.css" />
+<script src="js/guard.js"></script>
+</head>
+<body>
+
+  <header class="topbar">
+    <a href="index.html" class="brand"><span class="pin-dot"></span>Scribble</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="chat.html">Chat</a>
+      <a href="status.html">Status</a>
+      <a href="profile.html" class="active">Profile</a>
+      <span class="who">signed in as <span id="user-greeting">you</span></span>
+      <button id="logout-btn" class="btn btn-danger-text">Log out</button>
+    </nav>
+  </header>
+
+  <div class="profile-wrap">
+    <div class="profile-card">
+      <div class="profile-header">
+        <div class="avatar-initial big" id="profile-avatar">--</div>
+        <div>
+          <h1 id="profile-name">—</h1>
+          <p class="profile-email" id="profile-email">—</p>
+        </div>
+      </div>
+
+      <div class="form-msg" id="profile-message"></div>
+
+      <form id="profile-form">
+        <div class="field">
+          <label for="display-name">Display name</label>
+          <input type="text" id="display-name" name="display-name" />
+        </div>
+        <div class="field">
+          <label for="status-line">About</label>
+          <input type="text" id="status-line" name="status-line" placeholder="Say something about yourself" />
+        </div>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+      </form>
+
+      <div class="profile-stats">
+        <div class="stat">
+          <div class="stat-num" id="stat-contacts">4</div>
+          <div class="stat-label">Contacts</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" id="stat-messages">0</div>
+          <div class="stat-label">Messages sent</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" id="stat-since">Today</div>
+          <div class="stat-label">Member since</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/profile.js"></script>
+  <script src="js/session-ui.js"></script>
+</body>
+</html>
