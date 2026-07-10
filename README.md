@@ -59,7 +59,7 @@ chatapp/
 └── README.md
 ```
 
-## Running it locally
+## Running it locally In Your Laptop
 
 No build step, no install. Two options:
 
@@ -70,13 +70,6 @@ No build step, no install. Two options:
    python3 -m http.server 8000
    ```
    then visit `http://localhost:8000`.
-
-## Before you submit — assign pages and add real names
-
-There's no dedicated "team" page — instead, assign each of the five pages
-(Home, Login/Sign up, Chat, Status, Profile) to one group member so everyone
-has a clear, separately-gradable piece to own. Wherever you write the report
-or the presentation, list who owned which page.
 
 ## Git & GitHub setup
 
