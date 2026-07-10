@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Status — Scribble</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="css/style.css" />
+<script src="js/guard.js"></script>
+</head>
+<body>
+
+  <header class="topbar">
+    <a href="index.html" class="brand"><span class="pin-dot"></span>Scribble</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="chat.html">Chat</a>
+      <a href="status.html" class="active">Status</a>
+      <a href="profile.html">Profile</a>
+      <span class="who">signed in as <span id="user-greeting">you</span></span>
+      <button id="logout-btn" class="btn btn-danger-text">Log out</button>
+    </nav>
+  </header>
+
+  <div class="status-wrap">
+    <div class="page-heading" style="padding-left:0; padding-right:0;">
+      <h1>Status</h1>
+      <p>Pin a quick update for your contacts, and see what they've posted.</p>
+    </div>
+
+    <div class="my-status-card">
+      <div class="avatar-initial" id="my-status-avatar">--</div>
+      <div style="flex:1;">
+        <div class="my-status-label">My status</div>
+        <div id="my-status-text" class="my-status-text">No status yet — add one below.</div>
+      </div>
+    </div>
+
+    <form id="status-form" class="status-form">
+      <input type="text" id="status-input" placeholder="What's on your mind?" autocomplete="off" maxlength="120" />
+      <button type="submit" class="btn btn-accent">Post</button>
+    </form>
+
+    <div class="status-feed-title">From your contacts</div>
+    <div id="status-feed" class="status-feed"></div>
+  </div>
+
+  <script src="js/status.js"></script>
+  <script src="js/session-ui.js"></script>
+</body>
+</html>
