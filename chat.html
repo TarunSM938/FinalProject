@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Scribble — chat</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="css/style.css" />
+<script src="js/guard.js"></script>
+</head>
+<body>
+
+  <header class="topbar">
+    <a href="index.html" class="brand"><span class="pin-dot"></span>Scribble</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="chat.html" class="active">Chat</a>
+      <a href="status.html">Status</a>
+      <a href="profile.html">Profile</a>
+      <span class="who">signed in as <span id="user-greeting">you</span></span>
+      <button id="logout-btn" class="btn btn-danger-text">Log out</button>
+    </nav>
+  </header>
+
+  <div class="chat-shell">
+    <aside class="roster">
+      <div class="roster-title">Roster</div>
+      <div id="roster-list"></div>
+    </aside>
+
+    <section class="conversation">
+      <div id="empty-state" class="empty-state">
+        <div class="big-pin">📌</div>
+        <p>Pick someone from the roster to open a conversation.</p>
+      </div>
+
+      <div id="conversation-panel" style="display:none; flex-direction:column; height:100%;">
+        <div class="conv-header">
+          <div class="avatar-initial" id="conv-avatar">--</div>
+          <div>
+            <div class="c-name" id="conv-name">—</div>
+            <div class="c-status" id="conv-status">—</div>
+          </div>
+        </div>
+
+        <div class="conv-body ruled" id="conv-body"></div>
+
+        <form class="composer" id="composer-form">
+          <input type="text" id="composer-input" placeholder="Write a note…" autocomplete="off" />
+          <button type="submit" class="btn btn-accent">Send</button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/chat.js"></script>
+  <script src="js/session-ui.js"></script>
+</body>
+</html>
